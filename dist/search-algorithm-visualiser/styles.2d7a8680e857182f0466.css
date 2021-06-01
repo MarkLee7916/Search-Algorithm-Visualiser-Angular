@@ -1,0 +1,1 @@
+button{border:2px solid #000;background-color:#afeeee;color:#000;font-size:calc((1.3vw + 1.3vh) / 2);width:calc((17vw + 17vh) / 2);height:calc((6vw + 6vh) / 2);border-radius:10px;margin-bottom:2vh}button:hover{background-color:#000;color:#afeeee;cursor:pointer}.slider-container{display:flex;flex-direction:column;align-items:center;font-size:2vmin}
