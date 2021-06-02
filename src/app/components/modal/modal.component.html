@@ -1,0 +1,36 @@
+<div class="modal">
+    <div class="modal-content">
+        <span id="modal-title">Configure Array and Target</span>
+
+        <div class="slider-container">
+            <span>Toggle Minimum Array Length</span>
+            <input type="range" [defaultValue]="minArrLen" [max]="50" (input)="onMinArrLenChange($event)">
+            <span>{{minArrLen}}</span>
+        </div>
+
+        <div class="slider-container">
+            <span>Toggle Maximum Array Length</span>
+            <input type="range" [defaultValue]="maxArrLen" [max]="50" (input)="onMaxArrLenChange($event)">
+            <span>{{maxArrLen}}</span>
+        </div>
+
+        <div class="slider-container">
+            <span>Toggle Minimum Element Size</span>
+            <input type="range" [defaultValue]="minElemSize" (input)="onMinElemSizeChange($event)">
+            <span>{{minElemSize}}</span>
+        </div>
+
+        <div class="slider-container">
+            <span>Toggle Maximum Element Size</span>
+            <input type="range" [defaultValue]="maxElemSize" (input)="onMaxElemSizeChange($event)">
+            <span>{{maxElemSize}}</span>
+        </div>
+
+        <div class="slider-container">
+            <span>Toggle Target</span>
+            <input type="range" [defaultValue]="target" (input)="onTargetChange($event)">
+            <span>{{target}}</span>
+        </div>
+    </div>
+    <button id="close-modal" (click)="onHide()">Close Modal</button>
+</div>

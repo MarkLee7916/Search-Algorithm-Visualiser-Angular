@@ -1,0 +1,7 @@
+<span 
+    class="array-elem"
+    *ngFor="let num of currentFrame.array; let index = index"
+    [style.backgroundColor]="getElemColor(index)"
+>
+    {{num}}
+</span>

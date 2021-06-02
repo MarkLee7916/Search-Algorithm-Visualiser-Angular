@@ -1,0 +1,62 @@
+<div id="page" [style.opacity]="isModalVisible ? '0.2' : '1'">
+    <div id="menu">
+        <button 
+            (click)="showModal()"
+            [style.visibility]="isAnimationRunning ? 'hidden' : 'visible'"
+        >
+            Configure Array and Target
+        </button>
+
+        <button 
+            (click)="newArray()"
+            [style.visibility]="isAnimationRunning ? 'hidden' : 'visible'"
+        >
+            Generate New Array
+        </button>
+
+        <button 
+            (click)="animateAlgo()"
+            [style.visibility]="isAnimationRunning ? 'hidden' : 'visible'"
+        >Run Algorithm
+        </button>
+
+        <app-dropdown 
+            [style.visibility]="isAnimationRunning ? 'hidden' : 'visible'"
+            initialItem="Linear Search" 
+            [content]="dropdownContent"
+        >
+        </app-dropdown>
+
+        <div class="slider-container">
+            <span>Animation Delay</span>
+            <input type="range" [defaultValue]="animationDelayMillis" min="10" max="2000" (input)="setAnimationDelay($event)">
+            <span>{{animationDelayMillis}}ms</span>
+        </div>
+
+        <span id="target-label">Target: {{target}}</span>
+    </div>
+
+    <app-array 
+        [currentFrame]="frames[currentFrameIndex]" 
+        [isLastFrame]="currentFrameIndex === frames.length - 1"
+    >
+    </app-array>
+
+    <div id="legend">
+        <span class="color-codes">🟦 Searching</span>
+        <span class="color-codes">🟥 Not Found</span>
+        <span class="color-codes">🟩 Found</span>
+    </div>
+</div>
+
+<app-modal 
+    *ngIf="isModalVisible"
+    [(minArrLen)]="minArrLen"
+    [(maxArrLen)]="maxArrLen"
+    [(minElemSize)]="minElemSize"
+    [(maxElemSize)]="maxElemSize"
+    [(target)]="target"
+    (hideEmit)="hideModal()"
+>
+</app-modal>
+

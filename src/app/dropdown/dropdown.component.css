@@ -1,0 +1,10 @@
+.dropdown-button {
+  display: block;
+  border-radius: 0px;
+  margin: 0;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+}

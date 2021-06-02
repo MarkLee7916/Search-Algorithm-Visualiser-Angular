@@ -1,0 +1,9 @@
+.array-elem {
+  border: 1px solid black;
+  font-size: calc((2vw + 2vh) / 2);
+  height: calc((4vw + 4vh) / 2);
+  width: calc((4vw + 4vh) / 2);
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
